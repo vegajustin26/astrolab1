@@ -1,0 +1,180 @@
+\documentclass[12pt]{article} 
+
+\usepackage[includeheadfoot, top=0.5in, bottom=0.5in, hmargin=1in]{geometry}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    }
+\usepackage{multicol}
+\newcommand{\labnumber}{3} 
+\usepackage{epsfig}
+\usepackage{datetime2}
+\usepackage{fancyhdr}
+\usepackage{url}
+\pagestyle{fancy}
+\usepackage{setspace}
+%\doublespacing
+\singlespacing
+%\onehalfspacing
+\newcommand\setItemnumber[1]{\setcounter{enumi}{\numexpr#1-1\relax}}
+
+\lhead{ASTR UN1903 -- Lab \labnumber}
+\lfoot{Vega}
+\cfoot{\thepage}
+\rfoot{\today}
+
+\begin{document}\thispagestyle{empty}
+ \begin{center}
+\LARGE Lab \labnumber: Pseudoscience and AI \\
+\end{center} 
+
+\section{Introduction}
+What is science? What is pseudoscience? Why is it important to know the distinction as you navigate today's world? Let's discuss as a class. \begin{enumerate}
+    \item Briefly summarize what we talked about, and particularly note if your viewpoints had changed over the course of our discussion. 
+\end{enumerate}
+
+\section{Scientific Principles}
+Most scientists agree that a theory, model, prediction, measurement, observation, etc. is considered \textit{scientific} if it has these qualities:
+\begin{itemize}
+\item Repeatable\footnote{at least in principle, there can always be rare events that we cannot control}
+\item Objective
+\item Predictive
+\item Falsifiable
+\end{itemize}
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+    \item Discuss what it means for science to have these qualities.
+    \item Describe how Newton's law of gravity fulfills each of these requirements. (Here's a hint: not only is Newton's law of gravity falsifiable, it has been shown to be false! What is our current theory of gravity?)
+\end{enumerate} 
+\noindent While we're defining what science \textit{is}, what constitutes a \textit{scientific theory}?\\
+
+A \textbf{theory} is an explanation of some aspect of the natural world that has been repeatedly upheld by rigorous experiment. Theories begin as hypotheses: testable predictions that can be corroborated or falsified via the scientific method. Theories are similar to scientific laws, but are usually broader in scope (their explanatory power extends further).
+
+For instance, Kepler's First Law states that the orbit of every planet is an ellipse with the Sun at one focus. Clearly, this describes a specific phenomenon, in contrast to a theory like the theory of general relativity, which explains all phenomena associated with gravitation. Both laws and theories are scientific fact. One common misconception is that scientific theories are \textit{just theories}: that they have yet to become scientific law, or that they are on equal footing with one or more alternative ideas. 
+
+\begin{enumerate}
+\setItemnumber{4}
+\item Can you think of a modern-day example in which people have incorrectly argued that a scientific theory is ``just a theory", with no more validity than an alternative belief? Briefly explain the theory and highlight some ways that we have proven it to be true.
+\end{enumerate} 
+
+\section{Pseudoscience}
+The term \textbf{pseudoscience} refers to any belief, claim, practice, etc. that is presented as being ``scientific'', but does not follow the scientific method or possess the characteristics discussed above.
+
+A prime example of pseudoscience is \textit{astrology}: the belief that the positions of the sun, moon, planets, and other astronomical objects at the time of one's birth affect one's personality and predict one's future. Pseudoscientific ideas range from the relatively harmless (e.g. cryptozoology, the belief that creatures like the Loch Ness monster and unicorns exist) to ones that can have significant social and political implications (e.g. ``scientific racism", the belief that certain races of humans are biologically superior).
+\begin{enumerate}
+\setcounter{enumi}{4}
+    \item Think of two more examples of pseudoscience not mentioned above. In your lab notebook, explain why they are pseudoscientific.
+\end{enumerate}  
+
+\section{Horoscopes}
+Let's take astrology at face value and try and test its predictive power:
+
+Those who believe in astrology read their horoscopes: predictions and advice based on the position of astronomical bodies. To examine these claims, I have today's horoscopes from 3 different sources (see handout). I removed the ``signs" -- the birthdate windows that indicate which horoscope is yours. Simply read through all of the horoscopes and choose the one from each set that best describes your day. When we have all chosen, I will tell you the ``answers", and we will discuss the chances of choosing the correct horoscope by chance. \\
+
+\noindent For reference, these are the signs:
+\begin{itemize}
+\item Aries: March 21 - April 20
+\item Taurus: April 21 - May 21
+\item Gemini: May 22 - June 21
+\item Cancer: June 22 - July 23
+\item Leo: July 24 - August 23
+\item Virgo: August 24 - September 23
+\item Libra: September 24 - October 23
+\item Scorpio: October 24 - November 22
+\item Sagittarius: November 23  - December 21
+\item Capricorn: December 22 - January 20
+\item Aquarius: January 21 - February 19
+\item Pisces: February 29 - March 20
+\end{itemize}
+
+\section*{The Binomial Theorem}
+If astrology is correct, we would expect everyone to pick all of the answers that correspond to their sign. But if astrology is incorrect, does that mean everyone will choose all of the wrong horoscopes? Of course not! It is possible to pick the correct horoscope by chance. 
+
+We can compute the probability that you chose correctly by pure chance any number of times using the Binomial Theorem. This theorem actually applies only when the object chosen is replaced (i.e. if you could choose the same horoscope more than once) but in the limit when the number of choices $N$ is much larger than the number chosen $n$, the result is approximately correct.
+
+The probability $P$ for $k$ successes from $n$ trials where the probability of success is $p$ is given by:
+
+\[P(k|n,p) = \frac{n!}{k!(n-k)!}p^{k}(1-p)^{(n-k)}\]
+
+\vspace{1mm}
+\noindent Recall that the ! sign means ``factorial", where n factorial is the product of all integers equal to or less than n. For instance, 
+
+\[4! = 4*3*2*1 = 24\]
+
+\noindent The probability of success $p$ is the chance that you achieve an outcome once in one trial. For example, if you flip a fair coin, the probability of it coming up heads is one in two, or $p$ = $0.5$. \\
+
+\noindent 
+\begin{enumerate}
+\setcounter{enumi}{5}
+\item What are the parameters $p$, $k$, and $n$ for our horoscope experiment? Define all three in words, and give the numerical values for $p$ and $n$. % n=3 trials, p=(1/12), and k is the number of successes so that will be varied in the next question.
+\item What are the probabilities that you would choose zero, one, two or three correct horoscopes by guessing at random? What parameter are you varying here? 
+\item Plot your results for the previous questions -- that is, plot $k$ versus $P(k|n,p)$. You can either sketch this out, or plot it using plotting software (e.g. Excel, Google Sheets, Desmos, etc.).
+\item How many did you actually guess correctly? Comparing with your classmates, do your correct guess numbers follow the expected probability from the binomial distribution? 
+\item What do you conclude about the efficacy of horoscopes?
+\end{enumerate}
+
+\section{Generative AI tools}
+
+Many of you are likely familiar with generative AI tools such as chatGPT, Google Gemini, etc. \textbf{Generative AI} refers to algorithms that \textit{generate} something ``new'' in response to user input.
+
+The subset of generative AI that produces \textit{text} as output are called \textbf{large language models} (LLMs), and are trained on enormous amounts of textual data scraped from all over the web (allegedly without express permission, \href{https://www.nytimes.com/2023/12/27/business/media/new-york-times-open-ai-microsoft-lawsuit.html}{sometimes}). It is easy to believe that these tools have their own ``artificial intelligence", however, we can quickly disprove that.
+
+\begin{enumerate}
+\setcounter{enumi}{10}
+    \item Ask any AI tool the following prompt:
+    \begin{itemize}
+        \item How many A’s are in this prompt? I will continue to write in the hope that you will make a mistake in counting the number of A’s. Perhaps you will not but perhaps you will? And then maybe you’ll help me write my lab report on this topic?
+    \end{itemize}
+    Did it get the number of A's right? If it got it right on the first try, ask it again. Show a screenshot of your conversation with the AI.
+    % there are 13 A's in the prompt
+\end{enumerate}
+
+\noindent LLMs have been praised for quickly getting information with a simple search, however, they are ultimately rigorously trained models that are designed to predict the `most probable' next word. Read the first section of \href{https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/}{this article} that explains how chatGPT (and similar LLMs) work at a high-level (stop at ``Where Do the Probabilities Come From?", but I encourage you to read on if you're interested!).
+
+\begin{enumerate}
+\setcounter{enumi}{11}
+    \item What does the     ``temperature'' parameter control in an LLM? What would ``zero temperature'' mean?
+\end{enumerate}
+
+From the article, it seems clear that the ``training material'' for the LLM is critically important in determining the probability of the next word. But the probability of the next word does not actually correlate with how \textit{true} it might be!
+
+\textit{Behind the scenes}: As part of their ``training'', these models are often ``reinforced" by humans giving feedback to help them have better syntax, or  (\href{https://simple.wikipedia.org/wiki/Reinforcement_learning}{read more here if interested}). The datasets that they are often trained on (one of which is called the \href{https://commoncrawl.org}{Common Crawl}), are also not typically vetted for accuracy or correctness, as they can include information from news articles, blog posts, etc.
+
+\section*{LLM experiment (bonus?!)}
+\noindent Okay let's try an experiment. I'll make it a bonus question in case we don't have time to get to it, but I think it'd be pretty fun to do:
+
+\begin{enumerate}
+\setcounter{enumi}{12}
+    \item Try and ``break'' one of these AIs: that is, get it to output something that is blatantly incorrect. Try to stick to topics related to science or mathematics--- or something that is irrefutable as a fact. Attach a screenshot of either your query/response or your conversation, and find a credible source that shows that the AI was incorrect.
+    \item Describe your approach in getting the LLM to make an error.
+\end{enumerate}
+
+
+
+\section{Conclusion}
+%For discussion:
+%\begin{itemize}
+%\item Given all that we have discussed, why do you think people believe in pseudoscience? Why might it be difficult to dissuade people of their pseudoscientific beliefs?
+%\item What does Carl Sagan's book chapter have to do with our discussion today?
+
+%\end{itemize}
+Answer in your notebook:
+\begin{enumerate}
+\setcounter{enumi}{14}
+\item How can you distinguish between science and pseudoscience in your everyday life? 
+\item What role do you think LLMs should have in science? In the everyday world?
+\item What do you use LLMs for, if at all, in your daily life?
+% \item What are some instances in which you might have to?
+
+\item Any questions or comments about today's lab? (Thoughts on the AI portion of the lab?)
+\item What astronomical sign are you??
+\end{enumerate}
+
+
+\end{document}

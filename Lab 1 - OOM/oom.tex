@@ -1,0 +1,202 @@
+\documentclass[12pt]{article} 
+
+\usepackage[includeheadfoot, top=1in, bottom=1in, hmargin=1in]{geometry}
+\usepackage{multicol}
+\usepackage{indentfirst}
+\usepackage{epsfig}
+\usepackage{cancel}
+\usepackage{fancyhdr}
+\usepackage{url}
+\pagestyle{fancy}
+\usepackage{setspace}
+%\doublespacing
+\singlespacing
+\usepackage[shortlabels]{enumitem}  % modifiesenumerate, itemize
+%\setlist{noitemsep}
+\usepackage{multicol}
+%\onehalfspacing
+% \newcommand\setItemnumber[1]{\setcounter{enumi}{\numexpr#1-1\relax}}
+
+
+\lhead{Astronomy Lab}
+\chead{}
+\rhead{Spring 2025}
+\lfoot{Justin Vega}
+\cfoot{\thepage}
+
+
+\begin{document}\thispagestyle{empty}
+ \begin{center}
+{\huge Lab 1: Orders of Magnitude, Units and Scales}\\
+\end{center}
+
+
+\begin{center}
+\noindent \textit{``Space is big. Really big. You just won't believe how vastly, hugely, mindbogglingly big it is. I mean, you may think it's a long walk down to the chemist's, but that's just peanuts to space."}
+-Douglas Adams, The Hitchhiker's Guide to the Galaxy
+\end{center}
+
+\section*{Introduction}
+
+Astronomy asks us to ponder structures and systems on scales way outside the realm of human experience. From itty-bitty atoms to massive clusters of galaxies, from the speed of light to the age of stars, the sheer extremity of the numbers we toss around sometimes allows them to lose their meaning. If I tell you that Jupiter has a mass of 1,898,000,000,000,000,000,000,000,000 kg, it probably won't mean much to you. However, a working understanding of numbers, units, and especially \textit{orders of magnitude} is a vital tool of scientific literacy. The skills we will develop today allow us to rescue numbers from mathematical abstraction and root them in a familiar context. 
+
+\section*{Orders of Magnitude}
+
+The order of magnitude of a value is the ``power of ten'' that is closest to that value. To find the order of magnitude, write your value in scientific notation, and round the coefficient to either 1 or 10. You should end up with 10${^x}$, where x is a positive or negative integer. For instance, $0.001$, 1, and 1,000,000 are all orders of magnitude, though they are always written in their exponential forms:
+$10^{-3}$, $10^0$, and $10^6$.  
+
+Scientists use orders of magnitude when knowing the specific value of a number is not necessary or practical -- in particular, to facilitate easy comparisons between numbers. If you want to know how the radius of the Sun compared to the radius of the Earth, it is often sufficient to know whether the Sun has a radius of 0.01, or 10, or 100, or 1,000,000 times the size of the Earth. Throughout this course, you will be asked to calculate many numbers, and an important pre-calculation step is to estimate what order of magnitude your value should be. If I asked you to calculate the height of Pupin and you got an answer on the order of 10 cm, you would immediately know that value was wrong.
+
+In your own words, describe what an order of magnitude is. Then, to practice, find the orders of magnitude for the following values (and be sure to include units!): 
+
+\begin{enumerate}
+\item{In your own words, what is an order of magnitude?}
+\item{Earth's Radius - 6,357,000 m}
+\item{Mass of the Sun - $1.99 \times 10^{30}$ kg}
+\item{Mass of Proton - $1.6726219 \times 10^{-27}$ kg}
+\item{Empire State Building - 381 m}
+\end{enumerate}
+
+\section*{Units and Dimensions}
+
+Before we get to the fun stuff, we need to pause and review the super-important topic of units (and dimensions). Every number we will be dealing with represents something, and most things should have a dimension and unit. You can think of dimension as the physical quantity that a numerical value represents, denoted by square brackets (e.g. dimensions relevant for this lab are time [T], length [L], mass [M], temperature [$\theta$]), while units are what that quantity is measured in (e.g. seconds, meters, kilograms, Kelvin). Usually, you always need to include units when stating a numerical value for something. You're not 5.2 tall, you're 5.2 feet tall; class isn't 3 long, it's 3 hours long. 
+
+To do any calculations, the units need to agree. \textbf{You can't add centimeters and meters until you convert them to the same units.} 
+
+To convert units, it's best to mulitply the value by a fraction that's equal to 1: $\frac{1 \,year}{365 \,days}$, $\frac{12 \,inches}{1 \,foot}$, etc. For example, to convert 8 feet to inches, you say:
+$$ 8 \, \mathrm{feet} = 8 \, \cancel{\mathrm{feet}} \times  \frac{12 \,\mathrm{inches}}{1 \,\cancel{\mathrm{foot}}} = 96 \, \mathrm{inches} \, (\sim 10^2 \, \mathrm{inches, \, OOM}).$$
+
+You should explicitly write out your unit conversion. This is good practice, and I recommend that you get into the habit of doing this always: keeping track of units will help you avoid mistakes and retain your sanity!
+
+To practice, write the dimension and convert each of the following:
+
+\begin{enumerate}
+\setcounter{enumi}{5}
+\item{123456 seconds $\rightarrow$ days}
+\item{56 km $\rightarrow$ cm}
+\item{15 light-years $\rightarrow$ meters (One light-year is the distance that light travels in one year, where speed of light is c = $3 \times 10^{8}$ m/s)}
+\end{enumerate}
+
+The one value that won't have units is a ratio of like units:
+If someone is twice as old as you, we say they are ``two times" older, and
+that two is ``unitless". This is because if your age is 20 years and your friend's age is 40 years, the ratio of your ages is $\frac{40 \,years}{20 \,years}$ = 2. The units cancel.
+
+\subsection*{Detective Work with Dimensional Analysis}
+
+Consider a pendulum of length $L$ and mass $M$ swinging in the Earth's
+surface gravitational field.
+The period $T$ between successive swings can depend only on $M$, $L$, $g$, where g is the gravitational acceleration, which has SI units of m/s$^2$ (SI refers to the International System of Units). 
+
+\begin{enumerate}
+\setcounter{enumi}{8}
+    \item Which of the below options is the correct equation for pendulum's period? Use dimensional analysis to
+explain.
+\end{enumerate}
+
+\begin{multicols}{2}
+\begin{enumerate}[label={\alph*.}, leftmargin=3\parindent]
+
+\item{ T = 2 g M / L}
+\item{  T = 2$\pi$ L$^2$ / (M g)}
+\item{  T = 2 M $\sqrt{g}$ }
+\item{  T = g $\sqrt{L}$ }
+\item{  T = 2$\pi \sqrt{L / g}$}
+
+\item{ T = 2 $\pi$ g M / L }
+\item{  T = $\pi$ g M$^2$ / L$^3$}
+\item{  T = $\sqrt{2 M g}$ }
+\item{  T = 2$\pi$ L / M }
+\item{  T = 2$\pi \sqrt{g / L}$}
+
+\end{enumerate}
+\end{multicols}
+
+
+
+\section*{Order of Magnitude Physics}
+
+How many Earths would fit inside the Sun? How many cells do you have in your body? How long would it take you to walk to Delaware? If the universe was scaled so that the Sun was the size of a basketball, how far away would the nearest star be?
+
+You now have all the tools to answer these questions, and many more! When we do order of magnitude calculations, we keep one significant figure. This means keep 34456 as ${3 \times 10^4}$, not just $10^4$. We'll now practice some order of magnitude calculations. When you estimate a value, like the width of a human hair, explain how you arrive at your estimate. Remember to show your work: all values, calculations, and units!\\
+
+Remember that when you divide two of the same number with different exponents, you simply subtract the bottom exponent from the top exponent:
+
+\begin{equation}
+\frac{10^x}{10^y} = 10^{x-y}
+\end{equation}
+
+Calculate the order of magnitude of the ratio between the following quantities. Remember to convert two numbers to the same units and then take their ratio: 
+
+\begin{enumerate}
+\setcounter{enumi}{9}
+\item{The width of a human hair and your height}
+\item{The length of Manhattan and the distance to the Moon - 
+(Earth-Moon distance: 38,447,228,160 cm)}
+\end{itemize}
+
+
+\section*{A Little More Physics}
+
+Now let's say you're sitting at the Hungarian Pastry Shop and after some morning pastries and coffee, someone throws out a crazy question like ``Which do you think is less dense: the solar system, or an atom?" You could sit there and wonder, or you could grab a napkin and get an order of magnitude answer! Scientists call this a ``back of the envelope" or a ``bar napkin" calculation, after the two most common items that these calculations are written on. \\
+\begin{enumerate}
+\setcounter{enumi}{11}
+    \item So, which is less dense: the Solar System, or an atom? Don't forget to show your work! \\
+    \item Air has a density of 1.3 kg/m$^3$. How does this compare to the two densities you just calculated? (How many orders of magnitude is it off by?)
+\end{enumerate}
+
+\vspace{5pt}
+
+\noindent Some handy knowledge you have tucked away: 
+
+\begin{itemize}
+    \item The mass of the Solar System is 1.0014 solar masses (Put that in your own words -- what's contributing most of the mass of the solar system? What else contributes?) The mass of the Sun is ${\approx2\times10^{30}}$ kg. 
+    \item The semi-major axis of Neptune is 30.07 AU (1 AU = 149597870700 m).
+    \item The diameter of a hydrogen atom is about 1 Angstrom (1 Angstrom = $ 10^{-10}$m). 
+    \item The mass of a hydrogen atom is about ${1.67\times10^{-27}}$ kg.
+\end{itemize}
+
+%\section*{Now it's your turn}
+
+%Think up an order of magnitude question. It can be anything as long as you can gather enough information to make an intelligent estimation. The more creative and challenging you make it, the better!
+
+\section*{Scaling the Solar System}
+
+\subsection*{Estimating Sizes} \label{guesses}
+\paragraph{}
+How good is your intuition for astronomical sizes? Let's imagine taking the entire Solar System and scaling it down to a human-friendly size, while keeping the relative sizes and distances between the Sun and planets the same. Make estimates for the following, and give concrete examples (e.g. a bowling ball, a car, Manhattan). \textbf{I'll only be grading this section for completeness, but you'll have a chance to test your predictions in the next section}.
+
+\begin{enumerate}
+\setcounter{enumi}{13}
+\item If the Sun were the size of a basketball (25 cm), how big would Earth be?
+\item On the same scale, how big would Jupiter be?
+\item On the same scale, how big would the Moon be?
+\end{enumerate}
+
+\subsection*{Setting the Scale} \label{calculations}
+Now we'll set up a scale model of the Solar System with the Sun the size of a basketball (25 cm in diameter).
+Sun's diameter is $\approx 1.3927$ million km. Now set up a scale factor $F$. Solar system objects on the scale of the basketball will be $F$ times smaller than their actual size:
+
+\begin{equation}
+D_{basketball~scale} = F\times D_{actual~scale}
+\end{equation}
+Solve for $F$ using the scaled and actual values for the Sun's diameter.
+
+Now find the following scaled quantities and come up with an comparable-sized object example:
+\begin{enumerate}
+\setcounter{enumi}{16}
+\item Earth's scaled diameter (Earth's actual diameter $\approx 12,742$ km). 
+\item Jupiter's scaled diameter (Jupiter's actual diameter $\approx 139,820$ km). 
+\item Moon's scaled diameter (Moon's actual diameter $\approx 3,475$ km). 
+\end{enumerate}
+
+\section*{In Conclusion...}
+
+\begin{enumerate}
+\setcounter{enumi}{19}
+    \item What was something new that you learned today? (if nothing was new to you, please also let me know!)
+    \item What was your favorite and least favorite question/part of this lab?
+    \item Was anything unclear?
+    \item Do you have any questions or future suggestions for lab topics?
+\end{enumerate}
+
+\end{document}

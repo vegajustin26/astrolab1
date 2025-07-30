@@ -1,0 +1,283 @@
+\documentclass[12pt]{article}% uses letterpaper by default
+
+%---------- Uncomment one of them ------------------------------
+\usepackage[includeheadfoot, top=0.5in, bottom=0.5in, hmargin=1in]{geometry}
+
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+\pagestyle{fancy}
+\usepackage{graphicx}
+\singlespacing
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref} 
+\usepackage{xcolor}
+\hypersetup{ 
+     colorlinks=true, 
+     linkcolor=blue, 
+     filecolor=blue, 
+     citecolor=black,       
+     urlcolor=blue} 
+% urlcolor = URL links, linkcolor = within-PDF links
+
+% \newcommand*{\mt}{\mathrm}
+% \newcommand*{\unit}[1]{\;\mathrm{#1}}  % vemod.net/typesetting-units-in-latex
+% \newcommand*{\abt}{\mathord{\sim}} % tex.stackexchange.com/q/55701
+% \newcommand*{\Msun}{\mathrm{M}_{\sun}}
+
+\newcommand{\SPACE}{\vspace{3em}}
+\newcommand{\degrees}{\ensuremath{^\circ}}
+\newcommand{\arcmin}{\ensuremath{'}}
+\newcommand{\arcsec}{\ensuremath{"}}
+\newcommand{\hours}{\ensuremath{^\mathrm{h}}}
+\newcommand{\minutes}{\ensuremath{^\mathrm{m}}}
+\newcommand{\seconds}{\ensuremath{^\mathrm{s}}}
+\newcommand{\labnumber}{7}  % UPDATE THIS!
+
+\usepackage{datetime2}  % customize \today, defaults to yyyy-mm-dd
+\lhead{ASTR UN1903 -- Lab 7}
+\lfoot{Vega}
+\cfoot{\thepage}
+\rfoot{\today}
+\renewcommand{\rightmark}{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+% -----------------------------
+% End personal config (AT, Sp 2019)
+% -----------------------------
+
+\newcommand*{\mt}{\mathrm}
+\newcommand*{\unit}[1]{\;\mathrm{#1}}  % vemod.net/typesetting-units-in-latex
+\newcommand*{\Msun}{\mathrm{M}_{\sun}}
+
+% Compact spacing
+\setlength\parindent{0pt}
+% \setlength{\parskip}{1em}
+
+% -----------------------------
+% End personal config (AT, Sp 2019)
+% -----------------------------
+
+
+\begin{document}\thispagestyle{empty}
+
+\begin{center}
+\Huge Lab \labnumber: The Sun
+\end{center}
+
+\section{Videos from PBS Nova}\label{sec:vid}
+We'll watch a series of videos
+(\url{http://www.pbs.org/wgbh/nova/labs/videos/\#sun}) introducing solar
+science. For Sections~\ref{sec:vid} your answers can be brief; a few words or a sentence will do.
+\begin{enumerate}
+% \setcounter{enumi}{7}
+%\item How long does it take a photon to travel from the core of the Sun , where it's produced, to the surface?
+%\item Describe the 3 forces that are most relevant in the Sun .
+%\item Do your best to draw the magnetic field lines around the Sun in your lab notebook.
+\item How long does it take a photon to travel from the core of the sun, where it's produced, to the surface?
+\item Describe the 3 forces that are most relevant in the sun.
+\item How long does it take the sun to rotate once on its own axis?
+
+% \item Do your best to draw the magnetic field lines around the sun in your lab notebook. 
+\item Name two events that can be caused by a magnetic reconnection.
+\item Define what a ``solar maximum" is.
+\item Why do sunspots look darker than the rest of the sun?
+\item What protects the Earth from solar flares?
+\item What causes auroras?
+\item Why are we humans more vulnerable to exceptionally big solar storms than we were in 1859?
+\item Is the following statement true or false? ``The longer its wavelength, the more energy light carries.'' Explain why.
+\item Describe the instruments on the Solar Dynamics Observatory (AIA, HMI).
+\item Why is it useful for solar research to have instruments that can look at wavelengths besides the visible that we can see with our eyes?
+\item If you want to look at a hotter part of the solar atmosphere, do you want to look at smaller or larger wavelength light?
+\end{enumerate}
+
+\section{Solar Cycle}\label{sec:cycle}
+Click the Solar Cycle tab on this page and follow the instructions while
+answering the following questions:
+\url{http://www.pbs.org/wgbh/nova/labs/lab/sun/research}
+\begin{enumerate}
+\setcounter{enumi}{13}
+\item Record your estimates of R and the scientific estimates as you go.
+\item How do your estimates of R compare to the scientific estimates?  If your estimate differed, why do you think that was so?
+\item After completing your five estimates, how do your measurements (orange highlighted points) compare to the official solar cycle measurements? Include the figure in your report.
+\end{enumerate}
+
+
+\section{Storm Prediction}\label{sec:storm-pred}
+
+Click the Storm Prediction tab on this page and follow the instructions
+while answering the following questions:
+\url{http://www.pbs.org/wgbh/nova/labs/lab/sun/research}
+\begin{enumerate}
+\setcounter{enumi}{16}
+\item Record your answers, and how you did compared to the correct answers.
+\item Which of these was hardest for you to decide?  Easiest?
+%\item What does the size of a sunspot tell us about the Sun's magnetic field and how does it help us predict solar storms?
+%\item What does the complexity of sunspots tell us?
+%\item What does rapid sunspot growth tell us about the Sun's magnetic field?
+%\item How does the mixing of magnetic fields help us to predict solar flares or CMEs?
+%\item While observing the chromosphere and corona of the Sun, scientists often
+%observe bands of plasma, called filaments. What can these filaments tell us
+%about the possibility of a solar storm?
+\end{enumerate}
+
+\section{Astrobite}
+
+\href{http://www.astrobites.org}{Astrobites} is an astronomy blog site/online literary journal run by grad students from all over the world. Their goal is to make astronomy research more accessible, and they often write summaries of research papers to distill exciting and cutting-edge research into digestible `bites' for people outside of the field.\\
+\\
+Choose one of the following astrobites below to read, and answer the questions below about it:
+\begin{itemize}
+    \item \href{https://astrobites.org/2019/07/02/the-sun-vs-your-uncle-chromosphere-edition/}{The Sun vs. Your Uncle: Chromosphere Edition}
+    \item \href{https://astrobites.org/2018/12/24/vary-vary-little-star/}{Vary, Vary, Little Star... Or Don't, If You're The Sun}
+    \item \href{https://astrobites.org/2016/11/23/it-turns-out-the-sun-is-more-chill-than-we-previously-thought/}{It turns out the Sun is more chill than we previously thought}
+    \item \href{https://astrobites.org/2015/06/30/classifying-holes-in-sun/}{Classifying Holes in the Sun}
+\end{itemize}\\
+
+\textit{Tip:} You may find yourself encountering a lot of scientific jargon. Do your best with it and feel free to look things up if you need more context!\\
+\\
+\textbf{Questions:}
+\begin{enumerate}
+\setcounter{enumi}{18}
+    \item What article did you choose?
+    \item What is the article/paper about? Explain (in a few sentences) the main scientific question, how they went about investigating it, and what they concluded.
+    \item What is some new terminology that you learned? List them and their definitions.
+\end{enumerate}
+\section{Conclusions}
+\begin{enumerate}
+\setcounter{enumi}{21}
+    \item What did you like or dislike about this lab?  
+    \item What's something new that you learned about astronomy research?
+    \item Is anything still unclear?
+\end{enumerate}
+
+% \textbf{Presentation}: see first page of lab.  If everyone is done
+% investigating/writing by 9:30pm on March 06, and no one is waiting for movies
+% to render, we can do the presentations right away and conclude the lab sequence
+% early.
+
+%at the start of the March 13 lab you will present your results to the rest of
+%the class. Your presentation should be less than 5 minutes and should include
+%\begin{itemize}
+%\item your question
+%\item your conclusion / other outcome of your investigation
+%\item 1--2 images or movies from Helioviewer to support your conclusion
+%\end{itemize}
+
+% \newpage
+% \pagebreak
+% \appendix
+
+% \section{About the Sun}
+
+% \begin{itemize}
+%     \item Solar cycle: 11 years
+%     \item Sunspot counts, 2008-2019: \\
+%         \url{https://www.swpc.noaa.gov/products/solar-cycle-progression}
+%     \item Sun's rotation period: 24.5 days (equator), 38 days (poles) \\
+%         Sun's rotation period, synodic (equator): 26.24 days \\
+%         Sun's rotation period, synodic (lat=26 deg): 27.2753 days, called the Carrington period
+% \end{itemize}
+
+% \section{Data catalogs and archives}
+
+% A few examples, sorted in rough descending order of (anticipated) usefulness.
+% Google around to find more!
+
+% \begin{itemize}
+%     \item SOHO/LASCO coronal mass ejections \url{https://cdaw.gsfc.nasa.gov/CME_list/}
+%         manually identified by humans
+%         \begin{itemize}
+%         \item Example:
+%             \href{https://cdaw.gsfc.nasa.gov/CME_list/UNIVERSAL/2011_05/jsmovies/2011_05/20110509.205726.p073g/c2_rdif.html}{movie of strong CME, 2011/05/09 20:57:26UT}
+%         \item Example:
+%             \href{https://cdaw.gsfc.nasa.gov/CME_list/UNIVERSAL/2012_07/jsmovies/2012_07/20120723.023605.p286g/c2_rdif.html}{movie of strong CME, 2012/07/23 02:36:05UT}
+%         \item Note that one CME is accompanied by a burst of X-rays, but the
+%             other is not.  Why??
+%         \end{itemize}
+%     \item Hinode/XRT-detected X-ray flares (2006-2017) \url{http://xrt.cfa.harvard.edu/flare_catalog/all.html}
+%     \item RHESSI-detected X-ray flares (2002-2018) \url{http://hesperia.gsfc.nasa.gov/hessidata/dbase/hessi_flare_list.txt}
+%         with start and end times, peak X-ray photons per second (``P c/s'',
+%         peak counts/second), total counts, flare's position on the Sun .
+%         Warning, text file size is 17MB.
+%     \item ACE solar wind measurements (1998-2018)
+%         \url{http://www.srl.caltech.edu/ACE/ASC/DATA/level3/summaries.html}
+%         including wind velocity, particle density, magnetic field, etc.
+%         sensed at a location between Earth and Sun (quite close to Earth, at L1
+%         Lagrange point).
+%         You can ask, for example, what features on the Sun correlated with high
+%         levels of carbon ions hurling towards Earth?
+% \end{itemize}
+
+% \section{Helioviewer help!}
+
+% \begin{itemize}
+%     \item The ``measurement'' values are the wavelength, in Angstroms
+%         (\AA), of the filter used to obtain the image.
+%         $1 \unit{\AA} = 10^{-10} \unit{m} = 10 \unit{nm}$.
+%     \item If the date/time turns red or yellow, that means there is not data of
+%         the requested type taken close to the date/time you asked for.  Even if
+%         the date/time is green, it's best to check to see what time is actually
+%         being displayed, as opposed what time you input.
+%     \item Helioviewer User guide: \\
+%         \url{http://wiki.helioviewer.org/wiki/Helioviewer.org_User_Guide_3.1.0}
+%     \item Helioviewer ``Features and Events'' annotations on Helioviewer: \\
+%         \url{http://wiki.helioviewer.org/wiki/HEK_Features_and_Events}
+%     \item Glossary of solar physics terms: \\
+%         \url{https://hesperia.gsfc.nasa.gov/sftheory/glossary.htm}
+%     \item What do SDO images show? \\
+%         \url{https://www.nasa.gov/mission_pages/sunearth/news/light-wavelengths.html}
+%     \item What do SDO images show? (same image, slightly more detailed explanation) \\
+%         \url{https://www.nasa.gov/content/goddard/how-sdo-sees-the-sun}
+% \end{itemize}
+
+% \section{Cheat-sheet of Helioviewer data}
+
+% \begin{itemize}
+% \item SDO: 2010 to present
+%     \begin{itemize}
+%     \item Cadence: ~30 seconds (for same wavelength image)
+%     \item AIA: 94, 131, 171, 193, 211, 304, 335, 1600, 1700, 4500 \AA
+%     \item HMI: continuum, magnetogram
+%     \end{itemize}
+% \item SOHO: 1995 to present
+%     \begin{itemize}
+%     \item Cadence: 12 minute (?)
+%     \item EIT: 171, 195, 284, 304 \AA
+%     \item LASCO: C2 (inner), C3 (outer) white-light coronagraph
+%     \item MDI: continuum, magnetogram
+%     \end{itemize}
+% \item STEREO-A: 2007 to present
+% \item STEREO-B: 2007 to 2014
+%     \begin{itemize}
+%     \item Positions: \url{https://stereo-ssc.nascom.nasa.gov/cgi-bin/make\_where\_gif}
+%     \item Cadence: 3 minute (?at best)
+%     \item SECCHI EUVI 171, 195, 284, 304 \AA
+%     \item SECCHI COR1 white-light coronagraph (inner)
+%     \item SECCHI COR2 white-light coronagraph (outer)
+%     \end{itemize}
+% \item TRACE: 1998 to 2010
+%     \begin{itemize}
+%     \item 171 \AA (ionized Fe), 195  \AA (ionized Fe), 284 \AA (ionized Fe),
+%         1216 \AA (neutral H), 1550 \AA (ionized C), 1600  \AA (continuum),
+%         1700 \AA (continuum)
+%     %171 (FeIX), 195 (FeXII), 284 (FeXV), 1216 (HI), 1550 (CIV)
+%     \end{itemize}
+% \item Yohkoh: 1991 to 2001
+%     \begin{itemize}
+%     \item Soft X-ray telescope
+%     \item Some movies at \url{http://ylstone.physics.montana.edu/ylegacy/}
+%     \end{itemize}
+% \item Hinode: 2006 to present
+%     \begin{itemize}
+%     \item XRT: an X-ray telescope
+%     \item Data are a bit challenging to use: small cut-outs and lower cadence,
+%         and need to decipher filter-wheel configuration
+%     \end{itemize}
+% \item PROBA-2: 2009 to present
+%     \begin{itemize}
+%     \item Cadence: 1 minute
+%     \item SWAP: 174 \AA
+%     \end{itemize}
+% \end{itemize}
+\end{document}
